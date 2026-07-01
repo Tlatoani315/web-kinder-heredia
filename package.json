@@ -1,0 +1,32 @@
+{
+  "name": "web-kinder-heredia",
+  "version": "1.0.0",
+  "description": "Este sitio es parte de la tal:",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node --watch backend/server.js",
+    "seed": "node -e \"require('./backend/db/schema').initSchema().then(()=>process.exit(0))\"",
+    "test": "echo \"No hay pruebas configuradas aún\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tlatoani315/web-kinder-heredia.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Tlatoani315/web-kinder-heredia/issues"
+  },
+  "homepage": "https://github.com/Tlatoani315/web-kinder-heredia#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^4.21.2",
+    "sql.js": "^1.13.0"
+  }
+}

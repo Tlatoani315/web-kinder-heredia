@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Página web del Jardín de Niños José María Heredia y Heredia — Avisos, actividades y contacto." />
+  <title>Jardín de Niños José María Heredia y Heredia</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       BARRA DE NAVEGACIÓN FIJA (STICKY)
+  ============================================================ -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="navbar__container">
+
+      <!-- Logo / Identidad -->
+      <a href="#inicio" class="navbar__brand" aria-label="Inicio — Jardín de Niños José María Heredia">
+        <img src="img/logo.svg" alt="Logotipo del Jardín de Niños José María Heredia y Heredia" class="navbar__logo" />
+        <div class="navbar__brand-text">
+          <span class="navbar__name">J. N. José María</span>
+          <span class="navbar__subtitle">Heredia y Heredia</span>
+        </div>
+      </a>
+
+      <!-- Menú principal (desktop) -->
+      <nav class="navbar__nav" id="navMenu" aria-label="Navegación principal">
+        <ul class="navbar__list" role="list">
+          <li><a href="#inicio"      class="navbar__link">Inicio</a></li>
+          <li><a href="#avisos"      class="navbar__link">Avisos</a></li>
+          <li><a href="#nosotros"    class="navbar__link">Nosotros</a></li>
+          <li><a href="#actividades" class="navbar__link">Actividades</a></li>
+          <li><a href="#contacto"    class="navbar__link navbar__link--cta">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Botón hamburguesa (móvil) -->
+      <button
+        class="navbar__hamburger"
+        id="hamburgerBtn"
+        aria-label="Abrir menú de navegación"
+        aria-expanded="false"
+        aria-controls="navMenu"
+      >
+        <span class="navbar__hamburger-bar"></span>
+        <span class="navbar__hamburger-bar"></span>
+        <span class="navbar__hamburger-bar"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ============================================================
+         SECCIÓN 1 — INICIO / HERO
+    ============================================================ -->
+    <section id="inicio" class="hero" aria-labelledby="hero-title">
+      <div class="hero__deco" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <!-- Imagen hero: placeholder — reemplazar con <img src="img/hero.webp" alt="..."> -->
+      <div class="hero__bg-placeholder" aria-hidden="true"></div>
+
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <div class="hero__badges">
+          <img src="img/logo.svg" alt="Logotipo del Jardín de Niños" class="hero__badge-img" />
+          <img src="img/escudo_edomex.svg" alt="Escudo del Estado de México" class="hero__badge-img" />
+        </div>
+        <p class="hero__cycle" id="dyn-ciclo-hero">Ciclo Escolar 2025 – 2026</p>
+        <h1 class="hero__title" id="hero-title">
+          Jardín de Niños<br />
+          <span class="hero__title--highlight">José María Heredia y Heredia</span>
+        </h1>
+        <p class="hero__message" id="dyn-mensaje-hero">
+          Bienvenidas y bienvenidos a nuestra comunidad escolar.<br />
+          Aquí encontrarás avisos, información institucional y todo lo necesario<br class="hero__br-desktop" />
+          para mantenerte al día con las actividades del plantel.
+        </p>
+        <div class="hero__actions">
+          <a href="#avisos"   class="btn btn--primary">Ver avisos recientes</a>
+          <a href="#contacto" class="btn btn--outline">Contactar a la escuela</a>
+        </div>
+      </div>
+
+      <!-- Wave Divider -->
+      <div class="hero__wave" aria-hidden="true">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C52.16,93.26,103.92,80.3,155,67.69,209.72,54.12,265.8,42.22,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECCIÓN 2 — AVISOS / TABLERO
+    ============================================================ -->
+    <section id="avisos" class="section avisos" aria-labelledby="avisos-title">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title" id="avisos-title">Tablero de Avisos</h2>
+          <p class="section__subtitle">Mantente informado con los comunicados más recientes del plantel.</p>
+        </div>
+
+        <!-- Filtros de categoría -->
+        <div class="avisos__filtros" role="group" aria-label="Filtrar avisos por categoría">
+          <button class="filtro-btn filtro-btn--active" data-filter="all">Todos</button>
+          <button class="filtro-btn" data-filter="comunicado">Comunicado</button>
+          <button class="filtro-btn" data-filter="evento">Evento</button>
+          <button class="filtro-btn" data-filter="tramites">Trámites</button>
+          <button class="filtro-btn" data-filter="academico">Académico</button>
+          <button class="filtro-btn" data-filter="medio-ambiente">Medio Ambiente</button>
+          <button class="filtro-btn" data-filter="salud">Salud</button>
+        </div>
+
+        <!-- Grid de tarjetas -->
+        <div class="avisos__grid" id="avisosGrid" aria-live="polite" aria-label="Listado de avisos">
+
+          <article class="aviso-card" data-category="comunicado" tabindex="0">
+            <div class="aviso-card__header">
+              <span class="aviso-badge aviso-badge--comunicado">Comunicado</span>
+              <time class="aviso-card__date" datetime="2026-06-20">20 jun 2026</time>
+            </div>
+            <h3 class="aviso-card__title">Inicio del periodo de inscripciones 2026–2027</h3>
+            <p class="aviso-card__body">Se informa a los padres de familia que el periodo de inscripciones para el próximo ciclo escolar estará abierto del 1 al 15 de julio. Presentarse con documentación completa.</p>
+            <span class="aviso-card__new" aria-label="Nuevo aviso">Nuevo</span>
+          </article>
+
+          <article class="aviso-card" data-category="evento" tabindex="0">
+            <div class="aviso-card__header">
+              <span class="aviso-badge aviso-badge--evento">Evento</span>
+              <time class="aviso-card__date" datetime="2026-06-28">28 jun 2026</time>
+            </div>
+            <h3 class="aviso-card__title">Festival de clausura del ciclo escolar</h3>
+            <p class="aviso-card__body">Los invitamos a la festividad de clausura el día viernes 28 de junio a las 10:00 h en el patio principal. La asistencia de padres y tutores es altamente recomendada.</p>
+          </article>
+
+          <article class="aviso-card" data-category="tramites" tabindex="0">
+            <div class="aviso-card__header">
+              <span class="aviso-badge aviso-badge--tramites">Trámites</span>
+              <time class="aviso-card__date" datetime="2026-06-15">15 jun 2026</time>
+            </div>
+            <h3 class="aviso-card__title">Entrega de boletas de evaluación</h3>
+            <p class="aviso-card__body">La entrega de boletas finales se realizará el lunes 30 de junio en un horario de 8:00 a 12:00 h. Es obligatoria la presencia del tutor o padre de familia.</p>
+          </article>
+
+          <article class="aviso-card" data-category="academico" tabindex="0">
+            <div class="aviso-card__header">
+              <span class="aviso-badge aviso-badge--academico">Académico</span>
+              <time class="aviso-card__date" datetime="2026-06-10">10 jun 2026</time>
+            </div>
+            <h3 class="aviso-card__title">Semana de reforzamiento de pensamiento matemático</h3>
+            <p class="aviso-card__body">Durante la semana del 17 al 21 de junio se llevarán actividades especiales de estimulación del pensamiento lógico-matemático para los tres grados.</p>
+          </article>
+
+          <article class="aviso-card" data-category="medio-ambiente" tabindex="0">
+            <div class="aviso-card__header">
+              <span class="aviso-badge aviso-badge--medio-ambiente">Medio Ambiente</span>
+              <time class="aviso-card__date" datetime="2026-06-05">05 jun 2026</time>
+            </div>
+            <h3 class="aviso-card__title">Jornada de reforestación escolar</h3>
+            <p class="aviso-card__body">Con motivo del Día Mundial del Medio Ambiente, el plantel realizó una jornada de siembra de árboles con la participación de alumnos, docentes y padres de familia.</p>
+          </article>
+
+          <article class="aviso-card" data-category="salud" tabindex="0">
+            <div class="aviso-card__header">
+              <span class="aviso-badge aviso-badge--salud">Salud</span>
+              <time class="aviso-card__date" datetime="2026-06-01">01 jun 2026</time>
+            </div>
+            <h3 class="aviso-card__title">Campaña de vacunación — Unidad Móvil SEP</h3>
+            <p class="aviso-card__body">La unidad móvil de vacunación visitará el plantel el día 10 de junio. Se solicita a los padres de familia presentar la cartilla de vacunación actualizada.</p>
+          </article>
+
+        </div><!-- /.avisos__grid -->
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECCIÓN 3 — NOSOTROS
+    ============================================================ -->
+    <section id="nosotros" class="section nosotros" aria-labelledby="nosotros-title">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title" id="nosotros-title">Nuestra Escuela</h2>
+          <p class="section__subtitle">Conoce la misión, visión y valores que guían nuestra labor educativa.</p>
+        </div>
+
+        <div class="nosotros__layout">
+
+          <!-- Columna izquierda: Misión / Visión / Valores -->
+          <div class="nosotros__info">
+
+            <div class="nosotros__photo-wrapper">
+              <img src="img/jardín_niños.png" alt="Fachada del Jardín de Niños José María Heredia y Heredia" class="nosotros__photo" />
+            </div>
+
+            <!-- Cita destacada orgánica -->
+            <blockquote class="quote-organica">
+              "El juego es el nivel más alto de desarrollo del niño, su forma de expresar el mundo."
+            </blockquote>
+
+            <div class="info-block">
+              <div class="info-block__icon" aria-hidden="true">🎯</div>
+              <div>
+                <h3 class="info-block__title">Misión</h3>
+                <p class="info-block__text" id="dyn-mision">Ofrecer una educación preescolar integral y de calidad que favorezca el desarrollo de habilidades, capacidades y valores en las niñas y niños, mediante ambientes de aprendizaje seguros y una participación activa de la comunidad escolar.</p>
+              </div>
+            </div>
+
+            <div class="info-block">
+              <div class="info-block__icon" aria-hidden="true">🌟</div>
+              <div>
+                <h3 class="info-block__title">Visión</h3>
+                <p class="info-block__text" id="dyn-vision">Ser una institución de educación inicial reconocida en el municipio por su compromiso formativo, su calidez y la adopción de medios eficientes que fortalezcan la comunicación y la confianza con los padres de familia.</p>
+              </div>
+            </div>
+
+            <div class="info-block">
+              <div class="info-block__icon" aria-hidden="true">💎</div>
+              <div>
+                <h3 class="info-block__title">Valores</h3>
+                <ul class="info-block__list">
+                  <li><strong>Respeto:</strong> Promover la buena convivencia, la equidad y la inclusión dentro de la comunidad escolar.</li>
+                  <li><strong>Responsabilidad:</strong> Cumplir con el cuidado, la atención y la formación de los alumnos.</li>
+                  <li><strong>Colaboración:</strong> Fomentar el trabajo conjunto entre directivos, docentes y tutores.</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Columna derecha: Estadísticas + Mapa -->
+          <div class="nosotros__aside">
+
+            <!-- Estadísticas rápidas -->
+            <div class="stats-grid">
+              <div class="stat-card">
+                <span class="stat-card__number">3</span>
+                <span class="stat-card__label">Grados</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-card__number">120+</span>
+                <span class="stat-card__label">Alumnos</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-card__number">8</span>
+                <span class="stat-card__label">Docentes</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-card__number" id="dyn-ciclo-stat">2025–26</span>
+                <span class="stat-card__label">Ciclo Escolar</span>
+              </div>
+            </div>
+
+            <!-- Mapa Google Maps incrustado — San Pedro Pozohuacán, Tecámac -->
+            <div class="nosotros__map">
+              <h3 class="nosotros__map-title">📍 Ubicación del plantel</h3>
+              <div class="map-wrapper">
+                <iframe
+                  title="Ubicación del Jardín de Niños José María Heredia y Heredia en San Pedro Pozohuacán, Tecámac"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3758.123456789012!2d-98.9500!3d19.7200!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ef0e0e0e0e0f%3A0x0!2sSan%20Pedro%20Pozohu%C3%A1can%2C%20Tec%C3%A1mac%2C%20M%C3%A9x.!5e0!3m2!1ses!2smx!4v1680000000000!5m2!1ses!2smx"
+                  width="100%"
+                  height="300"
+                  style="border:0;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+              <p class="nosotros__map-address">San Pedro Pozohuacán, Tecámac, Estado de México.</p>
+            </div>
+
+          </div>
+        </div><!-- /.nosotros__layout -->
+      </div>
+
+      <!-- Wave Divider to Actividades -->
+      <div class="nosotros__wave" aria-hidden="true">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C52.16,93.26,103.92,80.3,155,67.69,209.72,54.12,265.8,42.22,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECCIÓN 4 — ACTIVIDADES
+    ============================================================ -->
+    <section id="actividades" class="section actividades" aria-labelledby="actividades-title">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title" id="actividades-title">Nuestros Programas</h2>
+          <p class="section__subtitle">Actividades diseñadas para el desarrollo integral de cada alumno.</p>
+        </div>
+
+        <div class="actividades__grid">
+
+          <div class="actividad-card" style="background-image: url('img/artes_plasticas.webp');">
+            <div class="actividad-card__overlay"></div>
+            <div class="actividad-card__content">
+              <h3 class="actividad-card__title">Artes Plásticas</h3>
+              <p class="actividad-card__text">Estimulamos la creatividad y la expresión artística mediante pintura, modelado y manualidades.</p>
+            </div>
+          </div>
+
+          <div class="actividad-card" style="background-image: url('img/imagen_lectura.webp');">
+            <div class="actividad-card__overlay"></div>
+            <div class="actividad-card__content">
+              <h3 class="actividad-card__title">Lectura y Escritura</h3>
+              <p class="actividad-card__text">Fomentamos el amor por la lectura y el desarrollo de las primeras habilidades de escritura.</p>
+            </div>
+          </div>
+
+          <div class="actividad-card" style="background-image: url('img/musica_movimiento.webp');">
+            <div class="actividad-card__overlay"></div>
+            <div class="actividad-card__content">
+              <h3 class="actividad-card__title">Música y Movimiento</h3>
+              <p class="actividad-card__text">Desarrollamos el sentido del ritmo, la coordinación motriz y la expresión corporal a través de la música.</p>
+            </div>
+          </div>
+
+          <div class="actividad-card" style="background-image: url('img/educacion_ambiental.webp');">
+            <div class="actividad-card__overlay"></div>
+            <div class="actividad-card__content">
+              <h3 class="actividad-card__title">Educación Ambiental</h3>
+              <p class="actividad-card__text">Cultivamos el respeto por la naturaleza y el entorno, formando ciudadanos conscientes y responsables.</p>
+            </div>
+          </div>
+
+          <div class="actividad-card" style="background-image: url('img/pesnamiento_matematico.webp');">
+            <div class="actividad-card__overlay"></div>
+            <div class="actividad-card__content">
+              <h3 class="actividad-card__title">Pensamiento Matemático</h3>
+              <p class="actividad-card__text">Desarrollamos el pensamiento lógico y la resolución de problemas mediante juegos y actividades didácticas.</p>
+            </div>
+          </div>
+
+          <div class="actividad-card" style="background-image: url('img/desarrollo_emocional.webp');">
+            <div class="actividad-card__overlay"></div>
+            <div class="actividad-card__content">
+              <h3 class="actividad-card__title">Desarrollo Socioemocional</h3>
+              <p class="actividad-card__text">Fortalecemos la inteligencia emocional, la empatía y las habilidades de convivencia desde la primera infancia.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECCIÓN 5 — CONTACTO
+    ============================================================ -->
+    <section id="contacto" class="section contacto" aria-labelledby="contacto-title">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title section__title--light" id="contacto-title">Contacto</h2>
+          <p class="section__subtitle section__subtitle--light">Estamos para ayudarte. Escríbenos o visítanos.</p>
+        </div>
+
+        <div class="contacto__layout">
+
+          <!-- Datos oficiales -->
+          <div class="contacto__info">
+            <h3 class="contacto__info-title">Datos Oficiales</h3>
+
+            <ul class="contacto__datos" aria-label="Información de contacto oficial">
+              <li class="contacto__dato">
+                <span class="contacto__dato-icon" aria-hidden="true">📍</span>
+                <div>
+                  <strong>Dirección</strong>
+                  <p id="dyn-direccion">Av. Rancho la Providencia Fracc. Sierra Hermosa, Tecámac de Felipe Villanueva, CP. 55749 (A un costado de la Primaria Constitución de 1917)</p>
+                </div>
+              </li>
+              <li class="contacto__dato">
+                <span class="contacto__dato-icon" aria-hidden="true">📞</span>
+                <div>
+                  <strong>Teléfonos</strong>
+                  <p><a href="tel:+525524016387" class="contacto__link" id="dyn-telefono">55 2401 6387</a> / <a href="tel:+525559346262" class="contacto__link">55 5934 6262</a></p>
+                </div>
+              </li>
+              <li class="contacto__dato">
+                <span class="contacto__dato-icon" aria-hidden="true">✉️</span>
+                <div>
+                  <strong>Correo Electrónico</strong>
+                  <p><a href="mailto:josemariaherediayherediajardin@gmail.com" class="contacto__link" id="dyn-email">josemariaherediayherediajardin@gmail.com</a></p>
+                </div>
+              </li>
+              <li class="contacto__dato">
+                <span class="contacto__dato-icon" aria-hidden="true">🕒</span>
+                <div>
+                  <strong>Horario de Atención</strong>
+                  <p id="dyn-horario">Lunes a Viernes: 8:00 – 13:00 h</p>
+                </div>
+              </li>
+              <li class="contacto__dato">
+                <span class="contacto__dato-icon" aria-hidden="true">🏷️</span>
+                <div>
+                  <strong>Clave del Centro de Trabajo (CCT)</strong>
+                  <p id="dyn-cct">15EJN4144E</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Formulario de contacto -->
+          <div class="contacto__form-wrapper">
+            <h3 class="contacto__form-title">Envíanos un Mensaje</h3>
+
+            <div data-fs-success class="form-feedback" style="display:none; color: green; font-weight: bold; margin-bottom: 15px;">¡Gracias! Tu mensaje ha sido enviado exitosamente.</div>
+            <div data-fs-error class="form-feedback" style="display:none; color: red; font-weight: bold; margin-bottom: 15px;">Hubo un error al enviar el formulario. Verifica los campos.</div>
+
+            <form
+              id="contactForm"
+              class="contacto__form"
+              aria-label="Formulario de contacto"
+            >
+
+              <div class="form-group">
+                <label for="nombre" class="form-label">Nombre completo <span aria-hidden="true">*</span></label>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  class="form-input"
+                  placeholder="Ej. María González"
+                  autocomplete="name"
+                  required
+                  aria-required="true"
+                  data-fs-field
+                />
+                <span class="form-error" data-fs-error="nombre" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="correo" class="form-label">Correo electrónico <span aria-hidden="true">*</span></label>
+                <input
+                  type="email"
+                  id="correo"
+                  name="email"
+                  class="form-input"
+                  placeholder="Ej. maria@correo.com"
+                  autocomplete="email"
+                  required
+                  aria-required="true"
+                  data-fs-field
+                />
+                <span class="form-error" data-fs-error="email" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="asunto" class="form-label">Asunto <span aria-hidden="true">*</span></label>
+                <input
+                  type="text"
+                  id="asunto"
+                  name="asunto"
+                  class="form-input"
+                  placeholder="Ej. Consulta sobre inscripción"
+                  required
+                  aria-required="true"
+                  data-fs-field
+                />
+                <span class="form-error" data-fs-error="asunto" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="mensaje" class="form-label">Mensaje <span aria-hidden="true">*</span></label>
+                <textarea
+                  id="mensaje"
+                  name="message"
+                  class="form-input form-textarea"
+                  placeholder="Escribe tu mensaje aquí..."
+                  rows="5"
+                  required
+                  aria-required="true"
+                  data-fs-field
+                ></textarea>
+                <span class="form-error" data-fs-error="message" role="alert" aria-live="polite"></span>
+              </div>
+
+              <button type="submit" class="btn btn--primary btn--full" id="submitBtn" data-fs-submit-btn>
+                Enviar mensaje
+              </button>
+
+            </form>
+          </div>
+
+        </div><!-- /.contacto__layout -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       PIE DE PÁGINA
+  ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__container">
+      <div class="footer__brand">
+        <img src="img/logo.svg" alt="Logotipo del Jardín de Niños" class="footer__logo" />
+        <div>
+          <strong class="footer__name">Jardín de Niños José María Heredia y Heredia</strong>
+          <p class="footer__location" id="dyn-direccion-footer">San Pedro Pozohuacán, Tecámac, Edo. Méx.</p>
+        </div>
+      </div>
+      <nav class="footer__nav" aria-label="Navegación secundaria">
+        <a href="#inicio">Inicio</a>
+        <a href="#avisos">Avisos</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#actividades">Actividades</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <p class="footer__copy">
+        &copy; <span id="footerYear"></span> Jardín de Niños José María Heredia y Heredia · SEP · Tecámac
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <!-- Formspree SDK Initialization -->
+  <script>
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+    formspree('initForm', { formElement: '#contactForm', formId: 'mwvdrpkv' });
+  </script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+</body>
+</html>

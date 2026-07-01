@@ -1,1 +1,25 @@
+# Variables de entorno (contraseñas, secretos)
 .env
+
+# Base de datos SQLite generada en runtime
+backend/db/*.db
+backend/db/*.db-journal
+
+# Dependencias Node.js
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Documentación Privada / Entregables
+ENTREGA_ADMIN.md
+GUIA_DESPLIEGUE.md
+MANUAL_ADMIN.md
+TAL.md
+INSTRUCTIONS.md
+imagenes_necesarias.txt

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd700"/>
+      <stop offset="50%" stop-color="#f5c518"/>
+      <stop offset="100%" stop-color="#b8860b"/>
+    </linearGradient>
+    <linearGradient id="sky-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#bae6fd"/>
+    </linearGradient>
+  </defs>
+  <!-- Outer Shield Contour -->
+  <path d="M 10 20 L 90 20 C 90 60, 90 90, 50 110 C 10 90, 10 60, 10 20 Z" fill="#ffffff" stroke="url(#gold-grad)" stroke-width="4"/>
+  <path d="M 14 24 L 86 24 C 86 58, 86 86, 50 104 C 14 86, 14 58, 14 24 Z" fill="none" stroke="#2d3748" stroke-width="1"/>
+  
+  <!-- Partition Lines -->
+  <!-- Horizontal divide at 55 -->
+  <line x1="14" y1="55" x2="86" y2="55" stroke="#2d3748" stroke-width="1.5"/>
+  <!-- Vertical divide in lower half -->
+  <line x1="50" y1="55" x2="50" y2="104" stroke="#2d3748" stroke-width="1.5"/>
+  
+  <!-- Upper Section: Volcano (Xinantécatl), Rising Sun -->
+  <path d="M 14 24 L 86 24 L 86 55 L 14 55 Z" fill="url(#sky-grad)"/>
+  <!-- Mountain (Toluca Volcano) -->
+  <path d="M 20 55 L 42 35 L 50 42 L 68 32 L 80 55 Z" fill="#4b5563"/>
+  <path d="M 38 38 L 42 35 L 45 38 L 43 41 Z" fill="#ffffff"/> <!-- Snow peak -->
+  <path d="M 64 35 L 68 32 L 72 37 L 69 40 Z" fill="#ffffff"/> <!-- Snow peak -->
+  <!-- Sun -->
+  <circle cx="50" cy="28" r="6" fill="#ef4444"/>
+  <path d="M 50 18 L 50 22 M 50 34 L 50 38 M 40 28 L 44 28 M 56 28 L 60 28 M 43 21 L 46 24 M 54 32 L 57 35 M 43 35 L 46 32 M 54 21 L 57 24" stroke="#ef4444" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Lower Left Section: Book & Gear (Culture and Work) -->
+  <path d="M 14 55 L 50 55 L 50 94 C 36 86, 22 75, 14 55 Z" fill="#f8fafc"/>
+  <!-- Book -->
+  <path d="M 22 68 C 22 65, 30 65, 34 68 L 34 82 C 30 79, 22 79, 22 82 Z" fill="#ef4444"/>
+  <path d="M 34 68 C 34 65, 42 65, 46 68 L 46 82 C 42 79, 34 79, 34 82 Z" fill="#ef4444"/>
+  <!-- Gear (Work) -->
+  <circle cx="34" cy="62" r="5" fill="none" stroke="#4b5563" stroke-width="2"/>
+  <circle cx="34" cy="62" r="2" fill="#4b5563"/>
+  <path d="M 34 55 L 34 57 M 34 67 L 34 69 M 27 62 L 29 62 M 39 62 L 41 62" stroke="#4b5563" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Lower Right Section: Corn field (Agriculture) -->
+  <path d="M 50 55 L 86 55 C 86 75, 72 86, 50 94 Z" fill="#ecfdf5"/>
+  <!-- Corn stalks -->
+  <path d="M 68 58 Q 66 72 60 85 M 72 62 Q 70 75 66 85" stroke="#10b981" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <circle cx="68" cy="64" r="2.5" fill="#f5c518"/>
+  <circle cx="72" cy="68" r="2.5" fill="#f5c518"/>
+
+  <!-- Ribbon with Text -->
+  <path d="M 5 110 L 95 110 L 90 118 L 10 118 Z" fill="url(#gold-grad)"/>
+  <text x="50" y="116" font-family="'Nunito', sans-serif" font-size="5.5" font-weight="bold" fill="#0f2e5a" text-anchor="middle">ESTADO DE MÉXICO</text>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="grad-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A4B8C"/>
+      <stop offset="100%" stop-color="#0f2e5a"/>
+    </linearGradient>
+    <linearGradient id="grad-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2E9E5B"/>
+      <stop offset="100%" stop-color="#1e7040"/>
+    </linearGradient>
+  </defs>
+  <!-- Outer ring -->
+  <circle cx="50" cy="50" r="48" fill="none" stroke="url(#grad-blue)" stroke-width="2.5"/>
+  <circle cx="50" cy="50" r="44" fill="url(#grad-blue)"/>
+  <!-- Decorative rays -->
+  <path d="M 50 15 A 35 35 0 0 1 85 50 L 81 50 A 31 31 0 0 0 50 19 Z" fill="#F5C518" opacity="0.8"/>
+  <!-- Tree of Knowledge -->
+  <path d="M 35 65 Q 40 45 50 45 Q 60 45 65 65 Z" fill="url(#grad-green)"/>
+  <circle cx="45" cy="50" r="8" fill="url(#grad-green)"/>
+  <circle cx="55" cy="50" r="8" fill="url(#grad-green)"/>
+  <circle cx="50" cy="42" r="9" fill="url(#grad-green)"/>
+  <!-- Trunk -->
+  <path d="M 48 55 L 48 70 L 52 70 L 52 55 Z" fill="#78350f"/>
+  <!-- Book / Building -->
+  <path d="M 40 70 L 60 70 L 55 60 L 45 60 Z" fill="#F5C518"/>
+  <path d="M 50 58 L 60 70 M 50 58 L 40 70" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Happy Children silhouettes -->
+  <circle cx="32" cy="72" r="3" fill="#ffffff"/>
+  <path d="M 28 80 C 28 76, 36 76, 36 80 Z" fill="#ffffff"/>
+  <circle cx="68" cy="72" r="3" fill="#ffffff"/>
+  <path d="M 64 80 C 64 76, 72 76, 72 80 Z" fill="#ffffff"/>
+</svg>

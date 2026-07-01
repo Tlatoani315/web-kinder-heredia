@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="grass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+    <linearGradient id="wall" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+    <linearGradient id="roof" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+  </defs>
+  <!-- Background Sky -->
+  <rect width="400" height="250" fill="url(#sky)"/>
+  <!-- Clouds -->
+  <path d="M 30 50 Q 40 30 55 35 Q 70 30 75 45 Q 85 45 80 55 L 25 55 Z" fill="#ffffff" opacity="0.85"/>
+  <path d="M 300 40 Q 312 20 330 25 Q 345 20 350 35 Q 362 35 358 45 L 295 45 Z" fill="#ffffff" opacity="0.85"/>
+  
+  <!-- Sun -->
+  <circle cx="200" cy="60" r="18" fill="#f5c518" opacity="0.9"/>
+  
+  <!-- Mountains / Hills -->
+  <path d="M -50 250 Q 80 140 220 250 Z" fill="#22c55e" opacity="0.4"/>
+  <path d="M 180 250 Q 300 160 450 250 Z" fill="#16a34a" opacity="0.4"/>
+  
+  <!-- School Building Facade -->
+  <!-- Main building -->
+  <rect x="80" y="100" width="240" height="110" fill="url(#wall)" rx="6"/>
+  <!-- Roof -->
+  <path d="M 70 100 L 200 60 L 330 100 Z" fill="url(#roof)"/>
+  <!-- Small tower -->
+  <rect x="180" y="45" width="40" height="20" fill="#f1f5f9"/>
+  <path d="M 175 45 L 200 25 L 225 45 Z" fill="#b91c1c"/>
+  <circle cx="200" cy="52" r="3" fill="#f5c518"/> <!-- Bell -->
+  
+  <!-- Windows -->
+  <rect x="105" y="115" width="35" height="30" fill="#bae6fd" stroke="#475569" stroke-width="2" rx="3"/>
+  <line x1="122.5" y1="115" x2="122.5" y2="145" stroke="#475569" stroke-width="1.5"/>
+  <line x1="105" y1="130" x2="140" y2="130" stroke="#475569" stroke-width="1.5"/>
+  
+  <rect x="260" y="115" width="35" height="30" fill="#bae6fd" stroke="#475569" stroke-width="2" rx="3"/>
+  <line x1="277.5" y1="115" x2="277.5" y2="145" stroke="#475569" stroke-width="1.5"/>
+  <line x1="260" y1="130" x2="295" y2="130" stroke="#475569" stroke-width="1.5"/>
+  
+  <!-- Door -->
+  <rect x="175" y="145" width="50" height="65" fill="#78350f" rx="3"/>
+  <!-- Arch over door -->
+  <path d="M 175 145 C 175 125, 225 125, 225 145 Z" fill="#ffd700"/>
+  <circle cx="218" cy="180" r="2.5" fill="#f5c518"/> <!-- Door handle -->
+  
+  <!-- Ground (Grass) -->
+  <rect x="0" y="210" width="400" height="40" fill="url(#grass)"/>
+  
+  <!-- Trees -->
+  <!-- Left Tree -->
+  <rect x="40" y="140" width="10" height="70" fill="#78350f"/>
+  <path d="M 20 140 C 15 110, 75 110, 70 140 Z" fill="#15803d"/>
+  <circle cx="45" cy="120" r="16" fill="#16a34a"/>
+  <!-- Right Tree -->
+  <rect x="350" y="140" width="10" height="70" fill="#78350f"/>
+  <path d="M 330 140 C 325 115, 385 115, 380 140 Z" fill="#15803d"/>
+  <circle cx="355" cy="125" r="16" fill="#16a34a"/>
+  
+  <!-- School Sign -->
+  <rect x="110" y="80" width="180" height="15" fill="#1e3a8a" rx="3"/>
+  <text x="200" y="91" font-family="'Nunito', sans-serif" font-size="7" font-weight="bold" fill="#ffffff" text-anchor="middle">JARDIN DE NIÑOS JOSÉ MARÍA HEREDIA</text>
+  
+  <!-- Playground elements (Stylized) -->
+  <!-- Slide -->
+  <path d="M 300 210 L 320 185 L 325 185 L 305 210" fill="#475569"/>
+  <path d="M 320 185 L 345 210" stroke="#ef4444" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Swing -->
+  <line x1="25" y1="180" x2="25" y2="210" stroke="#475569" stroke-width="2"/>
+  <line x1="55" y1="180" x2="55" y2="210" stroke="#475569" stroke-width="2"/>
+  <line x1="25" y1="180" x2="55" y2="180" stroke="#475569" stroke-width="3"/>
+  <line x1="32" y1="180" x2="32" y2="202" stroke="#cbd5e1" stroke-width="1"/>
+  <line x1="48" y1="180" x2="48" y2="202" stroke="#cbd5e1" stroke-width="1"/>
+  <rect x="30" y="202" width="20" height="2" fill="#78350f"/>
+</svg>
